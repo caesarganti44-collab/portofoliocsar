@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Caesar 🌿</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --botol: #103b2d;
+    --hijau: #286749;
+    --sage: #a8c3a0;
+    --muda: #e5eee2;
+    --krem: #faf9f0;
+    --teks: #293d32;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: var(--krem);
+    color: var(--teks);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: var(--botol);
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: var(--sage);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--sage);
+}
+
+/* HIASAN */
+.sticker {
+    display: inline-block;
+    font-size: 27px;
+    animation: goyang 3s ease-in-out infinite;
+}
+
+@keyframes goyang {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(8deg); }
+}
+
+section {
+    padding: 65px 9%;
+    scroll-margin-top: 20px;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 65px 9%;
+    flex-wrap: wrap;
+    background:
+        radial-gradient(circle at 10% 20%, #d1e4c8, transparent 25%),
+        linear-gradient(135deg, #faf9f0, #e0ecd9);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "🍃  ✿  🦋";
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-size: 25px;
+    opacity: 0.7;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.tag {
+    display: inline-block;
+    background: #d0e1cc;
+    color: var(--botol);
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+}
+
+.hero h1 {
+    color: var(--botol);
+    font-size: clamp(38px, 5vw, 55px);
+    line-height: 1.25;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: #56835e;
+}
+
+.hero p {
+    max-width: 530px;
+    color: #5d7063;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--hijau);
+    color: white;
+    padding: 11px 23px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: var(--botol);
+    transform: translateY(-4px);
+}
+
+/* FOTO */
+.profile {
+    width: 260px;
+    height: 260px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 8px solid white;
+    overflow: hidden;
+    background: linear-gradient(145deg, #789b79, #184d38);
+    box-shadow: 0 12px 35px #103b2d30;
+    position: relative;
+}
+
+.profile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.photo-caption {
+    text-align: center;
+    color: #66886b;
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+/* JUDUL BAGIAN */
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title small {
+    color: #66886b;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    color: var(--botol);
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.section-title p {
+    color: #718078;
+    font-size: 14px;
+}
+
+/* ABOUT ME */
+.about {
+    background: #fff;
+    border: 1px solid #e0e8dc;
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 8px 25px #103b2d09;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-art {
+    background: linear-gradient(145deg, #103b2d, #56835e);
+    color: white;
+    padding: 30px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 270px;
+}
+
+.about-art .big-icon {
+    font-size: 70px;
+}
+
+.about-art h3 {
+    color: #d5e5cf;
+    margin: 10px 0;
+}
+
+.about-art p {
+    font-size: 14px;
+    color: #e5eee2;
+}
+
+.about h3 {
+    color: var(--botol);
+    margin-bottom: 12px;
+}
+
+.about p {
+    color: #66766b;
+    margin-bottom: 12px;
+}
+
+.about strong {
+    color: var(--hijau);
+}
+
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.pill {
+    background: var(--muda);
+    color: var(--hijau);
+    padding: 7px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+/* MINAT */
+.interests {
+    background: #f0f4e9;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #dce6d7;
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px #184d3815;
+}
+
+.card-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: var(--muda);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--hijau);
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #718078;
+    font-size: 14px;
+}
+
+.card .decoration {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 23px;
+}
+
+/* FAVORIT */
+.favorites {
+    padding-top: 35px;
+}
+
+.favorite-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.favorite-item {
+    background: white;
+    border: 1px solid #e0e8dc;
+    border-radius: 18px;
+    padding: 15px 22px;
+    text-align: center;
+    min-width: 125px;
+}
+
+.favorite-item div {
+    font-size: 32px;
+}
+
+.favorite-item p {
+    font-size: 13px;
+    color: var(--hijau);
+}
+
+/* TUJUAN */
+.goals {
+    background: var(--botol);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.goals .section-title h2 {
+    color: white;
+}
+
+.goals .section-title p {
+    color: #d5e5cf;
+}
+
+.goal-box {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    background: #ffffff10;
+    border: 1px solid #ffffff35;
+    border-radius: 22px;
+    text-align: center;
+}
+
+.goal-box .goal-icon {
+    font-size: 48px;
+}
+
+.goal-box h3 {
+    color: var(--sage);
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.goal-box p {
+    color: #e0eadd;
+}
+
+/* KONTAK */
+.contact {
+    text-align: center;
+    background:
+        radial-gradient(circle at 10% 80%, #dcebd3, transparent 25%),
+        var(--krem);
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.contact-item {
+    background: white;
+    border: 1px solid #dce6d7;
+    border-radius: 15px;
+    padding: 15px 22px;
+    color: var(--hijau);
+}
+
+.contact-item span {
+    font-size: 23px;
+    margin-right: 8px;
+}
+
+footer {
+    background: var(--botol);
+    color: #d8e5d7;
+    padding: 22px;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--sage);
+}
+
+/* HP */
+@media (max-width: 750px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile {
+        width: 210px;
+        height: 210px;
+    }
+
+    section {
+        padding: 48px 7%;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+    }
+
+    .about {
+        padding: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGASI -->
+<header>
+    <div class="logo">Caesar<span>. 🌿</span></div>
+    <nav>
+        <a href="#home">🏡 Beranda</a>
+        <a href="#about">🍃 Tentang</a>
+        <a href="#skills">💻 Keahlian</a>
+        <a href="#goals">🌳 Tujuan</a>
+        <a href="#contact">💌 Kontak</a>
+    </nav>
+</header>
+
+<!-- BERANDA -->
+<section class="hero" id="home">
+    <div class="hero-text">
+        <span class="tag">🌱 Welcome to My Portfolio ✨</span>
+        <h1>Hai, aku <span>Caesar!</span> 🍀</h1>
+
+        <p>
+            Mahasiswa Teknik Informatika yang suka belajar tentang
+            teknologi, pemrograman, dan pembuatan website.
+            Aku percaya bahwa seperti alam, proses belajar juga
+            butuh waktu untuk tumbuh dan berkembang. 🌻
+        </p>
+
+        <a href="#about" class="button">Kenalan Yuk! 💚 →</a>
+    </div>
+
+    <div>
+        <div class="profile">
+            <!-- Letakkan foto.jpg satu folder dengan index.html -->
+            <img src="WhatsApp Image 2026-10-24 at 09.33.38.jpeg" alt="Foto Caesar">
+        </div>
+        <p class="photo-caption">That's me! 🌿📸</p>
+    </div>
+</section>
+
+<!-- ABOUT ME -->
+<section id="about">
+    <div class="section-title">
+        <small>🍃 GET TO KNOW ME 🍃</small>
+        <h2>Tentang Aku 🌼</h2>
+        <p>Mengenal Caesar lebih dekat 🦋</p>
+    </div>
+
+    <div class="about-container">
+        <div class="about-art">
+            <div class="big-icon">🌳🐿️</div>
+            <h3>Growing Every Day 🌱</h3>
+            <p>
+                Belajar, mencoba, dan berkembang sedikit demi sedikit.
+                Every little step matters! ✨
+            </p>
+            <div class="sticker">🌷 🍄 🌿</div>
+        </div>
+
+        <div class="about">
+            <h3>Halo, aku Caesar! 👋</h3>
+            <p>
+                Aku mahasiswa <strong>Teknik Informatika</strong>
+                yang sedang mempelajari dunia teknologi. Aku tertarik
+                dengan pemrograman, desain website, dan berbagai hal
+                baru di bidang komputer. 💻
+            </p>
+
+            <p>
+                Di luar dunia teknologi, aku suka suasana alam yang
+                tenang dan warna hijau yang memberikan kesan nyaman.
+                Bagiku, belajar itu seperti merawat tanaman: butuh
+                waktu, kesabaran, dan proses untuk terus tumbuh. 🌱
+            </p>
+
+            <div class="pills">
+                <span class="pill">🎓 Mahasiswa</span>
+                <span class="pill">💻 Teknologi</span>
+                <span class="pill">🌿 Alam</span>
+                <span class="pill">🎨 Kreativitas</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KEAHLIAN -->
+<section class="interests" id="skills">
+    <div class="section-title">
+        <small>✨ MY LEARNING JOURNEY ✨</small>
+        <h2>Yang Sedang Aku Pelajari 🌱</h2>
+        <p>Pelan-pelan belajar, sedikit demi sedikit berkembang.</p>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <span class="decoration">🌟</span>
+            <div class="card-icon">💻</div>
+            <h3>Pemrograman</h3>
+            <p>
+                Belajar memahami logika, menulis kode, dan membuat
+                program sederhana. Sedikit kode, banyak kemungkinan!
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="decoration">🍀</span>
+            <div class="card-icon">🌐</div>
+            <h3>HTML & CSS</h3>
+            <p>
+                Membuat halaman website yang menarik, rapi,
+                dan nyaman digunakan.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="decoration">💫</span>
+            <div class="card-icon">🎨</div>
+            <h3>Desain Website</h3>
+            <p>
+                Mempelajari perpaduan warna, tata letak,
+                dan elemen visual agar website lebih estetik.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- HAL YANG DISUKAI -->
+<section class="favorites">
+    <div class="section-title">
+        <small>💚 LITTLE THINGS ABOUT ME</small>
+        <h2>Hal-Hal yang Aku Suka 🌷</h2>
+        <p>Hal sederhana yang bikin hari terasa menyenangkan.</p>
+    </div>
+
+    <div class="favorite-row">
+        <div class="favorite-item">
+            <div>🌳</div>
+            <p>Alam</p>
+        </div>
+
+        <div class="favorite-item">
+            <div>🍃</div>
+            <p>Warna Hijau</p>
+        </div>
+
+        <div class="favorite-item">
+            <div>💻</div>
+            <p>Teknologi</p>
+        </div>
+
+        <div class="favorite-item">
+            <div>🎧</div>
+            <p>Musik</p>
+        </div>
+
+        <div class="favorite-item">
+            <div>🌅</div>
+            <p>Pemandangan</p>
+        </div>
+
+        <div class="favorite-item">
+            <div>🐱</div>
+            <p>Kucing</p>
+        </div>
+    </div>
+</section>
+
+<!-- TUJUAN -->
+<section class="goals" id="goals">
+    <div class="section-title">
+        <small>🌲 MY GOALS 🌲</small>
+        <h2>Perjalanan dan Tujuanku</h2>
+        <p>Semua hal besar dimulai dari langkah kecil. 🌱</p>
+    </div>
+
+    <div class="goal-box">
+        <div class="goal-icon">🌳✨</div>
+        <h3>Keep Growing, Keep Learning</h3>
+        <p>
+            Aku ingin terus berkembang sebagai mahasiswa Teknik
+            Informatika, menambah pengalaman dalam pemrograman,
+            dan suatu hari bisa membuat website serta aplikasi sendiri.
+            Portofolio ini menjadi salah satu langkah kecilku
+            dalam proses belajar. 🌿
+        </p>
+        <br>
+        <p>🌱 Dream it. 🌻 Learn it. 🌳 Build it. 💚</p>
+    </div>
+</section>
+
+<!-- KONTAK -->
+<section class="contact" id="contact">
+    <div class="section-title">
+        <small>💌 SAY HELLO 💌</small>
+        <h2>Makasih Sudah Mampir! 💚</h2>
+        <p>
+            Senang kamu sudah berkunjung ke portofolioku.
+            Semoga harimu menyenangkan! 🌷🦋
+        </p>
+    </div>
+
+    <div class="contact-cards">
+        <div class="contact-item">
+            <span>📧</span>Email
+        </div>
+
+        <div class="contact-item">
+            <span>📸</span>Instagram
+        </div>
+
+        <div class="contact-item">
+            <span>💻</span>GitHub
+        </div>
+
+        <div class="contact-item">
+            <span>🌍</span>Indonesia
+        </div>
+    </div>
+
+    <p>“Good things take time.” 🌱💫</p>
+    <a href="#home" class="button">Kembali ke Atas ↑ 🍃</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>
+        © 2026 <span>Caesar</span> |
+        Made with 💚 and a little bit of code. 🌿✨
+    </p>
+</footer>
+
+</body>
+</html>
